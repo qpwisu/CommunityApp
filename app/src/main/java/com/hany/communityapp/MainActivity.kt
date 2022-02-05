@@ -14,18 +14,17 @@ import com.hany.communityapp.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
     private lateinit var auth:FirebaseAuth
     override fun onCreate(savedInstanceState: Bundle?) {
-        val binding= ActivityMainBinding.inflate(layoutInflater)
-
         super.onCreate(savedInstanceState)
+        val binding= ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         auth= Firebase.auth
-        binding.logoutBtn.setOnClickListener {
-            auth.signOut()
-            Toast.makeText(this,"로그아웃",Toast.LENGTH_LONG).show()
-            val intent= Intent(this, LoginActivity::class.java)
-            intent.flags= Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP
-            startActivity(intent)
-
-        }
+//        binding.logoutBtn.setOnClickListener {
+//            auth.signOut()
+//            Toast.makeText(this,"로그아웃",Toast.LENGTH_LONG).show()
+//            val intent= Intent(this, LoginActivity::class.java)
+//            intent.flags= Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP
+//            startActivity(intent)
+//
+//        }
     }
 }
