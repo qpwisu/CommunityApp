@@ -47,7 +47,6 @@ class JoinActivity : AppCompatActivity() {
                 goJoin = false
             }
 
-
             if (goJoin){
                 auth.createUserWithEmailAndPassword(email, password)
                     .addOnCompleteListener(this) { task ->
@@ -59,13 +58,9 @@ class JoinActivity : AppCompatActivity() {
                             //화면이 전환되어서 뒤로 돌아갈때 이 페이지로 돌아가지 않게 한다
                         } else {
                             Toast.makeText(this,"가입 실패 ",Toast.LENGTH_LONG).show()
-
                         }
                     }
             }
         }
-
-
-
     }
 }
